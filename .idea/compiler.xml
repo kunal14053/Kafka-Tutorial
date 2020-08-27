@@ -6,9 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Kafkabasics" />
+        <module name="kafkabasics" />
         <module name="kafkaproducestwitter" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Kafkabasics" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
