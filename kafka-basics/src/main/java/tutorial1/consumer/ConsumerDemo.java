@@ -1,4 +1,4 @@
-package com.start.kafka.tutorial1.consumer;
+package tutorial1.consumer;
 
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
@@ -12,17 +12,17 @@ import java.time.Duration;
 import java.util.Collections;
 import java.util.Properties;
 
-public class ConsumerDemoGroups {
+public class ConsumerDemo {
 
     public static void main(String[] args) {
         System.out.printf("Hello World");
 
-        final Logger logger = LoggerFactory.getLogger(ConsumerDemoGroups.class.getName());
+        final Logger logger = LoggerFactory.getLogger(ConsumerDemo.class.getName());
 
         Properties properties = new Properties();
 
         String server = "127.0.0.1:9092";
-        String groupId = "My-fifth-Application";
+        String groupId = "My-forth-Application";
         String topic = "first_topic";
         properties.setProperty(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, server);
         properties.setProperty(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());

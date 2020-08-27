@@ -6,6 +6,7 @@
 
     <groupId>com.start.kafka</groupId>
     <artifactId>kafka-beginners-course</artifactId>
+    <packaging>pom</packaging>
     <version>1.0</version>
     <build>
         <!--force java 8 usage in our code-->
@@ -20,6 +21,10 @@
             </plugin>
         </plugins>
     </build>
+    <modules>
+        <module>kafka-produces-twitter</module>
+        <module>kafka-basics</module>
+    </modules>
 
     <dependencies>
 

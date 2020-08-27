@@ -1,6 +1,5 @@
-package com.start.kafka.tutorial1.consumer;
+package tutorial1.consumer;
 
-import com.sun.tools.internal.jxc.SchemaGenerator;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;

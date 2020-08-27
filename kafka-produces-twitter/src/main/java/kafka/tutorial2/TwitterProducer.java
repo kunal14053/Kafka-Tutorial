@@ -1,8 +1,6 @@
-package com.start.kafka.tutorial2.twitterproducer;
+package kafka.tutorial2;
 
 import com.google.common.collect.Lists;
-import com.start.kafka.tutorial1.consumer.ConsumerDemoAssignSeek;
-import com.start.kafka.tutorial1.consumer.ConsumerDemoWithThreads;
 import com.twitter.hbc.ClientBuilder;
 import com.twitter.hbc.core.Client;
 import com.twitter.hbc.core.Constants;
@@ -46,7 +44,7 @@ public class TwitterProducer {
         KafkaProducer<String, String> producer = createKafkaProducer();
 
         //add shutdown hook
-        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+       Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             logger.info("Caught shutdown hook, stopping application");
             client.stop();
             producer.close();
@@ -57,7 +55,7 @@ public class TwitterProducer {
         while (!client.isDone()) {
             String msg = null;
             try {
-                msg = msgQueue.poll(5, TimeUnit.SECONDS);
+                msg = msgQueue.poll(1, TimeUnit.SECONDS);
             } catch (InterruptedException e) {
                 e.printStackTrace();
                 client.stop();
@@ -87,6 +85,19 @@ public class TwitterProducer {
         properties.setProperty(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, value);
         properties.setProperty(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG,StringSerializer.class.getName());
         properties.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG,StringSerializer.class.getName());
+
+        //create a safe producer
+        properties.setProperty(ProducerConfig.ENABLE_IDEMPOTENCE_CONFIG, "true");
+        properties.setProperty(ProducerConfig.ACKS_CONFIG, "all");
+        properties.setProperty(ProducerConfig.RETRIES_CONFIG, Integer.toString(Integer.MAX_VALUE));
+        properties.setProperty(ProducerConfig.MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION, "5");
+
+        //create a high throughput producer
+        properties.setProperty(ProducerConfig.COMPRESSION_TYPE_CONFIG, "snappy");
+        properties.setProperty(ProducerConfig.LINGER_MS_CONFIG,"20");
+        properties.setProperty(ProducerConfig.BATCH_SIZE_CONFIG,Integer.toString(32*1024));
+
+
         //Create Producer
         KafkaProducer<String, String> producer = new KafkaProducer<String, String>(properties);
        return producer;
@@ -98,7 +109,7 @@ public class TwitterProducer {
         Hosts hosebirdHosts = new HttpHosts(Constants.STREAM_HOST);
         StatusesFilterEndpoint hosebirdEndpoint = new StatusesFilterEndpoint();
         // Optional: set up some followings and track terms
-        List<String> terms = Lists.newArrayList("bitcoin");
+        List<String> terms = Lists.newArrayList( "kafka", "india", "usa", "night");
         hosebirdEndpoint.trackTerms(terms);
 
         // These secrets should be read from a config file
