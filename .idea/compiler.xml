@@ -9,6 +9,7 @@
         <module name="kafkabasics" />
         <module name="kafkaconsumerelasticsearh" />
         <module name="kafkaproducestwitter" />
+        <module name="kafkastreams" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
