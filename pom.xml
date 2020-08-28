@@ -24,6 +24,7 @@
     <modules>
         <module>kafka-produces-twitter</module>
         <module>kafka-basics</module>
+        <module>kafka-consumer-elasticsearh</module>
     </modules>
 
 
