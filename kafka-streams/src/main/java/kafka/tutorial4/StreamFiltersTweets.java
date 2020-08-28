@@ -28,6 +28,7 @@ public class StreamFiltersTweets {
         //input topic
         KStream<String,String> inputTopic =  streamsBuilder.stream("twitter_tweet");
         KStream<String,String> filteredStream = inputTopic.filter((k, jsonTweets)-> extractFollowersCountFromTweets(jsonTweets)>1000);
+        //TODO: Need to create this topic
         filteredStream.to("important_tweets");
 
         //build a topology

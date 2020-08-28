@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d514bbc-5a78-40e1-95d6-5d84fee03fbe" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/kafka-streams/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kafka-streams/src/main/java/kafka/tutorial4/StreamFiltersTweets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka-streams/src/main/java/kafka/tutorial4/StreamFiltersTweets.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-streams/src/main/java/kafka/tutorial4/StreamFiltersTweets.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,8 +32,8 @@
       <file leaf-file-name="StreamFiltersTweets.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kafka-streams/src/main/java/kafka/tutorial4/StreamFiltersTweets.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="43" column="49" lean-forward="true" selection-start-line="43" selection-start-column="49" selection-end-line="43" selection-end-column="49" />
+            <state relative-caret-position="248">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -439,12 +435,12 @@
       <updated>1598377906257</updated>
       <workItem from="1598377913786" duration="9915000" />
       <workItem from="1598521334389" duration="5999000" />
-      <workItem from="1598549660296" duration="7547000" />
+      <workItem from="1598549660296" duration="7658000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23461000" />
+    <option name="totallyTimeSpent" value="23572000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -461,10 +457,10 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.5010504" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.46953782" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.46953782" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24114774" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24114774" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -755,8 +751,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/kafka-streams/src/main/java/kafka/tutorial4/StreamFiltersTweets.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="43" column="49" lean-forward="true" selection-start-line="43" selection-start-column="49" selection-end-line="43" selection-end-column="49" />
+        <state relative-caret-position="248">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
