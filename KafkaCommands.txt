@@ -1,0 +1,57 @@
+
+
+1. creat/list/desribe/delete
+
+kafka-topics --zookeeper 127.0.0.1:2181 --topic first_topic --create --partitions 3 --replication-factor 1
+
+kafka-topics --zookeeper 127.0.0.1:2181 --list
+
+kafka-topics --zookeeper 127.0.0.1:2181 --topic first_topic --describe
+
+kafka-topics --zookeeper 127.0.0.1:2181 --topic second_topic --delete
+
+2. Produces
+
+kafka-console-producer --broker-list 127.0.0.1:9092 --topic irst_topic
+
+kafka-console-producer --broker-list 127.0.0.1:9092 --topicirst_topic --producer-property acks=all
+
+
+3. Consumer
+
+kafka-console-consumer --bootstrap-server 127.0.0.1:9092 --topic first_topic
+
+ kafka-console-consumer --bootstrap-server 127.0.0.1:9092 --topic first_topic --from-beginning
+
+ kafka-console-consumer --bootstrap-server 127.0.0.1:9092 --topic first_topic --group my-first-application
+
+ kafka-console-consumer --bootstrap-server 127.0.0.1:9092 --topic first_topic --group my-second-application --from-beginning
+
+kafka-consumer-groups --bootstrap-server 127.0.0.1:9092 --lists
+
+kafka-consumer-groups --bootstrap-server 127.0.0.1:9092 --describe --group my-first-application
+
+kafka-consumer-groups --bootstrap-server 127.0.0.1:9092 --topic first_topic    --group my-first-application --reset-offsets --to-earliest --execute
+
+kafka-consumer-groups --bootstrap-server 127.0.0.1:9092 --topic first_topic    --group my-first-application --reset-offsets --shift-by 20 --execute
+
+kafka-consumer-groups --bootstrap-server 127.0.0.1:9092 --topic first_topic    --group my-first-application --reset-offsets --shift-by -10 --execute
+
+
+4. Config
+
+kafka-configs --zookeper 127.0.0.1:2181 --entity-type topics --entity-name --first_topic --describe
+
+kafka-configs --zookeper 127.0.0.1:2181 --entity-type topics --entity-name --first_topic --add-config min.insync.replicas=2 --alter
+
+kafka-configs --zookeper 127.0.0.1:2181 --entity-type topics --entity-name --first_topic --delete-config min.insync.replicas --alter
+
+5. Log Compaction
+ 
+
+6. Min insync replica
+
+7. Multiple Broker Kafka Cluster
+
+
+
